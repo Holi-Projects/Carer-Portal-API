@@ -1,0 +1,74 @@
+var router = require('express').Router();
+
+const { authJwt } = require('../middleware');
+
+const refAgency = require('../controllers/refAgency.js');
+const refContactMethod = require('../controllers/refContactMethod.js');
+const refClientCategory = require('../controllers/refClientCategory.js');
+const refEmployee = require('../controllers/refEmployee.js');
+const refFundingSource = require('../controllers/refFundingSource.js');
+const refHoliday = require('../controllers/refHoliday.js');
+const refMedicineAdminCode = require('../controllers/refMedicineAdminCode.js');
+const refPayRate = require('../controllers/refPayRate.js');
+const refPostCode = require('../controllers/refPostCode.js');
+const refPricingGroup = require('../controllers/refPricingGroup.js');
+const refShiftType = require('../controllers/refShiftType.js');
+const refSkill = require('../controllers/refSkill.js');
+const refType = require('../controllers/refType.js');
+const refCarer = require('../controllers/refCarer.js');
+const refClient = require('../controllers/refClient.js');
+const systemParameter = require('../controllers/systemParameters.js');
+const refTask = require('../controllers/refTask');
+const refAddress = require('../controllers/refAddress');
+const refWeekday = require('../controllers/refWeekday');
+const refClientFunding = require('../controllers/refClientFunding');
+
+router.route('/agency').get([ authJwt.verifyToken ], refAgency.list);
+//router.route('/agency').get(refAgency.getRefAgency);
+router.route('/action').get([ authJwt.verifyToken ], refType.getRefType);
+//router.route('/client-category').get([ authJwt.verifyToken ], refClientCategory.getRefClientCategory);
+router.route('/client-category').get([ authJwt.verifyToken ], refClientCategory.list);
+router.route('/contact-method').get([ authJwt.verifyToken ], refContactMethod.list);
+router.route('/contact-type').get([ authJwt.verifyToken ], refType.getRefType);
+router.route('/employee').get([ authJwt.verifyToken ], refEmployee.list);
+router.route('/ethnicity').get([ authJwt.verifyToken ], refType.getRefType);
+router.route('/frequency').get([ authJwt.verifyToken ], refType.getRefType);
+router.route('/funding-source').get([ authJwt.verifyToken ], refFundingSource.getList);
+router.route('/gender').get([ authJwt.verifyToken ], refType.getRefType);
+router.route('/holiday').get([ authJwt.verifyToken ], refHoliday.list); // supports query parameter: year
+router.route('/issue').get([ authJwt.verifyToken ], refType.getRefType);
+router.route('/language').get([ authJwt.verifyToken ], refType.getRefType);
+router.route('/med-admin').get([ authJwt.verifyToken ], refType.getRefType);
+router.route('/med-store').get([ authJwt.verifyToken ], refType.getRefType);
+router.route('/med-support').get([ authJwt.verifyToken ], refType.getRefType);
+router.route('/medicine-admin-code').get([ authJwt.verifyToken ], refMedicineAdminCode.list);
+router.route('/outcome').get([ authJwt.verifyToken ], refType.getRefType);
+router.route('/pay-rate').get([ authJwt.verifyToken ], refPayRate.list);
+//router.route('/postcode').get([ authJwt.verifyToken ], refPostCode.getRefPostCode);
+router.route('/postcode').get(refPostCode.getRefPostCodes);
+router.route('/postcode/:id').get(refPostCode.getRefPostCode);
+router.route('/locality').get(refPostCode.getRefLocalities);
+router.route('/pricing-group').get([ authJwt.verifyToken ], refPricingGroup.list);
+router.route('/route').get([ authJwt.verifyToken ], refType.getRefType);
+router.route('/shift-type').all([ authJwt.verifyToken ]).get(refShiftType.list);
+router.route('/shift-type/:id').all([ authJwt.verifyToken ]).get(refShiftType.get);
+router.route('/skill').all([ authJwt.verifyToken ]).get(refSkill.list).post(refSkill.insert);
+router.route('/skill/:id').all([ authJwt.verifyToken ]).get(refSkill.get).put(refSkill.update).delete(refSkill.remove);
+router.route('/state').get([ authJwt.verifyToken ], refType.getRefType);
+router.route('/sub-issue').get([ authJwt.verifyToken ], refType.getRefType);
+router.route('/unit').get([ authJwt.verifyToken ], refType.getRefType);
+//router.route('/system-parameter').get([ authJwt.verifyToken ], systemParameter.getSystemParameters);
+router.route('/system-parameter').all([ authJwt.verifyToken ]).get(systemParameter.get).put(systemParameter.update);
+router.route('/carer').get([ authJwt.verifyToken ], refCarer.list);
+router.route('/client').get([ authJwt.verifyToken ], refClient.list);
+//router.route('/carer').get([ authJwt.verifyToken ], refCarer.getRefCarer);
+router.route('/task').get([ authJwt.verifyToken ], refTask.list);
+router.route('/address').get([ authJwt.verifyToken ], refAddress.getRefAddress);
+router.route('/leave').get([ authJwt.verifyToken ], refType.getRefType);
+router.route('/weekday').get([ authJwt.verifyToken ], refWeekday.getRefWeekday);
+router.route('/clientFunding').get([ authJwt.verifyToken ], refClientFunding.getRefClientFunding);
+
+router.route('/:id').all([ authJwt.verifyToken ]).get(refType.get).put(refType.update).delete(refType.remove);
+router.route('/').all([ authJwt.verifyToken ]).get(refType.getList).post(refType.insert);
+
+module.exports = router;
