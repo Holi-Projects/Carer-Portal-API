@@ -1,0 +1,1265 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+		"Droid Sans", "Helvetica Neue", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	zoom: 1.3 !important;
+}
+/* html {
+  zoom: 1.5 !important;
+} */
+
+code {
+	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+.bold {
+	font-weight: 600;
+}
+
+.title {
+	font-size: xx-large;
+	font-weight: bold;
+	padding-bottom: 10px;
+	/* font-weight: 800; */
+}
+
+.smallTitle {
+	font-size: 16px;
+	font-weight: bold;
+	/* font-weight: 800; */
+}
+
+.smallText {
+	font-size: 8px;
+	/* font-weight: 800; */
+}
+.subTitle {
+	font-size: xx-large;
+	padding-bottom: 10px;
+	/* font-weight: 800; */
+}
+.xLarge {
+	font-size: x-large;
+	padding-bottom: 10px;
+	/* font-weight: 800; */
+}
+
+.titleReport {
+	font-size: x-large;
+	font-weight: bold;
+	padding-bottom: 10px;
+	/* font-weight: 800; */
+}
+
+.subTitleReport {
+	font-size: x-large;
+	padding-bottom: 10px;
+	/* font-weight: 800; */
+}
+.centerText {
+	text-align: center !important;
+	vertical-align: middle !important;
+}
+
+.leftText {
+	text-align: left !important;
+	vertical-align: middle !important;
+}
+
+.rightText {
+	text-align: right !important;
+	vertical-align: middle !important;
+}
+
+.topRightText {
+	text-align: right !important;
+	vertical-align: top !important;
+}
+
+.textRight {
+	text-align: right !important;
+}
+.containerRadio {
+	display: block;
+	position: relative;
+	padding-left: 35px;
+}
+
+.invoice-box {
+	max-width: 800px;
+	margin: auto;
+	padding: 30px;
+	border: 1px solid #eee;
+	box-shadow: 0 0 10px rgba(0, 0, 0, .15);
+	font-size: 16px;
+	line-height: 24px;
+	font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
+	color: #000;
+}
+.invoice-box table {
+	width: 100%;
+	line-height: inherit;
+	text-align: left;
+}
+.invoice-box table td {
+	padding: 5px;
+	vertical-align: top;
+}
+.invoice-box table tr td:nth-child(2) {
+	text-align: left;
+}
+.invoice-box table tr.top table td {
+	padding-bottom: 20px;
+}
+.invoice-box table tr.top table td.title {
+	font-size: 45px;
+	line-height: 45px;
+	color: #333;
+}
+.invoice-box table tr.information table td {
+	padding-bottom: 40px;
+}
+.invoice-box table tr.heading td {
+	background: #eee;
+	border-bottom: 1px solid #ddd;
+	font-weight: bold;
+}
+
+.invoice-box table tr.details td {
+	padding-bottom: 20px;
+}
+.invoice-box table tr.item td {
+	border-bottom: 1px solid #eee;
+}
+.invoice-box table tr.item.last td {
+	border-bottom: none;
+}
+.invoice-box table tr.total td:nth-child(2) {
+	border-top: 2px solid #eee;
+	font-weight: bold;
+}
+@media only screen and (max-width: 600px) {
+	.invoice-box table tr.top table td {
+		width: 100%;
+		display: block;
+		text-align: center;
+	}
+	.invoice-box table tr.information table td {
+		width: 100%;
+		display: block;
+		text-align: center;
+	}
+}
+/* Style for main topnavigation */
+/*  Original CSS code sourced and adapted for educational purposes: 
+https://www.w3schools.com/css/tryit.asp?filename=trycss_navbar_horizontal_responsive */
+ul.topnav {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #000;
+	font-size: medium;
+}
+
+ul.topnav li {
+	float: left;
+}
+
+ul.topnav li a {
+	display: block;
+	color: white;
+	background-color: #000;
+	text-align: center;
+	padding: 14px 18px;
+	text-decoration: none;
+	z-index: 102;
+}
+ul.topnav li a div a {
+	background-color: #45a049;
+}
+ul.topnav li a:hover:not(.active) {
+	background-color: #444444;
+}
+
+ul.topnav li a.active {
+	background-color: #45a049;
+}
+
+ul.topnav li.right {
+	float: right;
+}
+
+​li.dropdown {
+	display: block;
+	margin: auto 0;
+	position: fixed;
+}
+
+.dropdown-content {
+	display: none;
+	position: fixed;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+	z-index: 101;
+	background-color: #45a049 !important;
+}
+
+.dropdown-content a {
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+	text-align: left !important;
+	z-index: 101;
+	background-color: #444444 !important;
+	border-bottom: solid thin rgba(141, 140, 140, 0.2);
+}
+
+.dropdown-content a:hover:not(.active) {
+	background-color: #45a049 !important;
+}
+
+.dropdown:hover .dropdown-content {
+	display: block;
+}
+
+/* Style for css form */
+/* REF: https://www.w3schools.com/css/css_form.asp */
+* {
+	box-sizing: border-box;
+}
+.center50 {
+	/* margin: auto; */
+	width: 50%;
+}
+
+.center {
+	margin: auto;
+	padding: 10px;
+	width: 100%;
+	display: "flex";
+}
+.divTablebB {
+	display: table;
+	width: 100%;
+	background: #fff;
+	border: 1px solid #999999;
+	padding: 5px;
+}
+
+.wrapper-box {
+	width: calc(100% -20px);
+	display: "flex";
+	padding: 10px;
+	margin: 10px;
+	border: 1px solid #eee;
+	box-sizing: border-box;
+	box-shadow: 0 0 10px rgba(0, 0, 0, .15);
+	/* -webkit-box-shadow: 0px 0px 9px 1px #000000; 
+box-shadow: 0px 0px 9px 1px #000000; */
+	/* font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
+  color: #555; */
+}
+#customForm {
+	width: 100%;
+	padding: 15px;
+	background-color: white;
+	overflow: auto;
+}
+
+#customForm input[type=text],
+input[type=date],
+select,
+textarea {
+	width: 100%;
+	padding: 14px;
+	border: 0 solid #ccc !important;
+	/* margin: 5px 0 5px 0 !important; */
+	border-radius: 4px;
+	resize: vertical;
+	background-color: #fff !important;
+}
+
+#customForm label {
+	padding: 12px 12px 12px 0 !important;
+	display: inline-block !important;
+}
+
+.submitBtn input[type=submit] {
+	background-color: #4caf50;
+	color: white;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	float: right;
+	margin: auto;
+	width: 100%;
+}
+
+.button {
+	background-color: #4caf50; /* Green */
+	border: none;
+	color: white;
+	padding: 10px 20px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	cursor: pointer;
+	border-radius: 4px;
+	margin: auto;
+	width: 100%;
+}
+.addBtn {
+	background-color: #fff; /* Green */
+	border: none;
+	color: white;
+	padding: 5px !important;
+	/* padding: 10px 20px; */
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	cursor: pointer;
+	/* border-radius: 4px; */
+	/* margin:auto;  */
+	/* width: 100%; */
+}
+
+.addBtn label[for*='plus']:before {
+	content: '\f0fe';
+	color: #4caf50;
+	font-weight: 600;
+	font-size: 24px;
+	padding: 0px !important;
+}
+
+.customForm input[type=submit]:hover {
+	background-color: #45a049;
+}
+/* Clear floats after the columns */
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.col-25 {
+	float: left;
+	width: 25%;
+	/* margin-right: 6px; */
+}
+.col-50 {
+	float: left;
+	width: 50%;
+	/* margin-right: 6px; */
+}
+
+.col-75 {
+	float: left;
+	width: 75%;
+	/* margin-right: 6px; */
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+	.col-25,
+	.col-75,
+	.customForm input[type=submit],
+	.customForm {
+		width: 100%;
+		margin-top: 0;
+	}
+}
+
+.customTable6 {
+	border-collapse: collapse;
+	width: 100%;
+	/* padding: 20px; */
+}
+
+.customTable6 td {
+	border: 1px solid #ddd;
+	padding: 8px;
+	width: calc(100%/6);
+}
+
+.customTable6 th {
+	border: 1px solid #ddd;
+	padding: 8px;
+	width: calc(100%/8);
+}
+
+.customTable6 tr:nth-child(even) {
+	background-color: #f2f2f2;
+}
+.customTable6 tr:nth-child(odd) {
+	background-color: #e1e1e1;
+}
+
+/* .customTable6 tr:hover {background-color: #ddd;} */
+
+.customTable6 th {
+	padding-top: 12px;
+	padding-bottom: 12px;
+	text-align: left;
+	background-color: #4caf50;
+	color: white;
+}
+
+.customTable {
+	border-collapse: collapse;
+	width: 100%;
+	/* padding: 20px; */
+}
+
+.customTable td {
+	border: 1px solid #ddd;
+	padding: 10px;
+}
+
+.customTable th {
+	padding: 10px;
+	border: 1px solid #c1ced9 !important;
+	text-align: left;
+	background-color: #e1e1e1;
+}
+
+.report input[type=date] {
+	width: 100%;
+	padding: 10px !important;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	background: #f1f1f1;
+}
+
+.report input[type=date]::-webkit-datetime-edit-text {
+	font-size: 20px;
+	color: #dc3545;
+}
+
+.configTable table,
+td,
+th {
+	border: 1px solid #d1d1d1;
+	text-align: left;
+}
+
+.configTable table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+.configTable th,
+td {
+	border: 1px solid #c1ced9 !important;
+	padding: 8px;
+}
+.configTable thead {
+	background-color: #eee;
+}
+.configTable tbody > tr:hover {
+	background-color: #b3d7ff;
+}
+
+.configTable input[type=text],
+input[type=date],
+textarea,
+select {
+	width: 100%;
+	padding: 14px;
+	margin: 10px 0 10px 0;
+	border: 0px solid #ccc !important;
+	border-radius: 4px;
+	background: #fff;
+}
+
+/* Style for TABS */
+/*REF: https://codepen.io/oknoblich/pen/tfjFl*/
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700');
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+/* *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}html,
+body{height:100vh;}body{display:flex;align-items:center;justify-content:center;padding:40px;font:14px/1.5 'Open Sans',sans-serif;color:#345;background:#f0f2f4;} */
+
+.Tab p:not(:last-child) {
+	margin: 0 0 20px;
+}
+
+.Tab {
+	max-width: 100%;
+	padding: 30px;
+	border: 1px solid rgba(0, 0, 0, .2);
+	background: #fff;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, .1);
+}
+
+.Tab section {
+	/* display: none; */
+	padding: 20px 0 0;
+	border-top: 2px solid #0af;
+	height: 100%;
+	width: 100%;
+}
+
+.Tab input[type=radio] {
+	display: none;
+}
+
+.Tab label {
+	display: inline-block;
+	margin: 0 0 -2px;
+	padding: 15px 25px;
+	font-weight: 600;
+	text-align: center;
+	color: #000;
+	border: 1px solid transparent;
+}
+
+.Tab label:before {
+	font-family: fontawesome;
+	font-weight: normal;
+	/* margin-right: 10px; */
+}
+
+.Tab label[for*='tab1']:before {
+	content: '\f00b';
+}
+.Tab label[for*='tab2']:before {
+	content: '\f044';
+}
+.Tab label[for*='tab3']:before {
+	content: '\f0fe';
+}
+.Tab label[for*='tab4']:before {
+	content: '\f171';
+}
+
+/* REF: https://fontawesome.com/cheatsheet */
+.Tab label:hover {
+	/* color: #789; */
+	cursor: pointer;
+}
+
+.Tab input:checked + label {
+	color: #0af;
+	border: 2px solid #0af;
+	border-top: 2px solid #0af;
+	border-bottom: 3px solid #fff;
+}
+
+#tab1:checked ~ #content1,
+#tab2:checked ~ #content2,
+#tab3:checked ~ #content3,
+#tab4:checked ~ #content4 {
+	display: block;
+}
+
+@media screen and (max-width: 800px) {
+	.Tab label {
+		font-size: 0;
+	}
+	.Tab label:before {
+		margin: 0;
+		font-size: 18px;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	label {
+		padding: 15px;
+	}
+}
+
+/* DivTable.com */
+.divTable {
+	display: table;
+	width: 100%;
+	background: #fff;
+}
+.divTable input[type=text],
+input[type=date],
+select,
+textarea {
+	width: 100%;
+	padding: 10px;
+	border: none;
+	height: 100%;
+	/* border-radius: 4px; */
+	resize: vertical;
+	/* size: 0vmax; */
+}
+
+.divTable label {
+	font-size: 16px;
+	font-weight: 600;
+	/* padding: 10px; */
+}
+.divTableRow {
+	display: table-row;
+	width: 100%;
+}
+.divTableHeading {
+	background-color: #eee;
+	display: table-header-group;
+}
+.divTableCell {
+	border: 1px solid #999999;
+	display: table-cell;
+	padding: 3px 10px;
+	vertical-align: top;
+	width: calc(100%/3);
+}
+
+.divTableHead {
+	border: 1px solid #999999;
+	display: table-cell;
+	padding: 3px 8px;
+	vertical-align: top;
+	width: calc(100%/3);
+	background-color: #eee;
+}
+
+.w50 {
+	width: 50% !important;
+}
+.w25 {
+	width: 25% !important;
+}
+.w100 {
+	width: 100% !important;
+	/* padding: 5px; */
+	/* display:block !important; */
+}
+
+.w90 {
+	width: 90% !important;
+	/* display:block !important; */
+}
+
+.w80 {
+	width: 80% !important;
+	/* padding: 25px; */
+	/* display:block !important; */
+}
+
+.w70 {
+	width: 70% !important;
+	/* padding: 25px; */
+	/* display:block !important; */
+}
+
+.w40 {
+	width: 40% !important;
+}
+
+.w60 {
+	width: 60% !important;
+}
+.w20 {
+	width: 20% !important;
+}
+
+.w18-75 {
+	width: 18.75% !important;
+}
+
+.w15 {
+	width: 15% !important;
+}
+
+.w5 {
+	width: 5% !important;
+}
+
+.w2 {
+	width: 2% !important;
+}
+
+.noBorderLeft {
+	border-left: 0px solid #c1ced9 !important;
+}
+
+.noBorderRight {
+	border-right: 0px solid #c1ced9 !important;
+}
+
+.w10 {
+	width: 10% !important;
+}
+.w30 {
+	width: 30% !important;
+}
+.w33 {
+	width: 33% !important;
+}
+.w70 {
+	width: 70% !important;
+}
+.inline {
+	display: inline-block;
+}
+
+.divTableHeading {
+	background-color: #eee;
+	display: table-header-group;
+	font-weight: bold;
+}
+.divTableFoot {
+	background-color: #eee;
+	display: table-footer-group;
+	font-weight: bold;
+}
+.divTableBody {
+	display: table-row-group;
+}
+
+.sidebar {
+	list-style-type: none;
+	/* width: 100%;
+  height: 100%; */
+	padding: 0px;
+	/* position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0; */
+	background-color: rgb(240, 240, 240);
+	position: relative;
+}
+
+.sidebar li {
+	background-color: rgb(240, 240, 240);
+	padding: 5px;
+	border-bottom: 1px solid #ccc;
+	/* color: #fff; */
+	/* width:300px; */
+	/* font-family: 'Ubuntu', sans-serif; */
+	/* font-weight:400;   */
+}
+.sidebar li:hover {
+	background-color: #e1e1e1;
+	padding: 5px;
+	text-decoration: none;
+	/* color: #fff; */
+	/* width:300px; */
+	/* font-family: 'Ubuntu', sans-serif; */
+	/* font-weight:400;   */
+}
+.sidebar a:link {
+	text-decoration: none;
+}
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+.search {
+	width: 100%;
+	position: relative;
+}
+
+.searchTerm {
+	/* float: left; */
+	width: 100%;
+	border: 3px solid #45a049;
+	padding: 5px;
+	height: 35px;
+	border-radius: 5px;
+	outline: none;
+	color: #9dbfaf;
+}
+
+.searchTerm:focus {
+	color: #45a049;
+}
+/* Search Bar */
+.searchButton {
+	position: absolute;
+	right: 0px;
+	width: 40px;
+	height: 35px;
+	border: 1px solid #45a049;
+	background: #45a049;
+	text-align: center;
+	color: #fff;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 20px;
+}
+
+/*Resize the wrap to see the search bar change!*/
+.searchWrap {
+	width: 100%;
+	position: relative;
+	height: 100%;
+	/* transform: translate(-50%, -50%);  */
+}
+
+/* The checkboxWrapper REF: https://www.w3schools.com/howto/howto_css_custom_checkbox.asp*/
+.checkboxWrapper {
+	display: block;
+	position: relative;
+	padding-left: 35px;
+	margin-bottom: 12px;
+	cursor: pointer;
+	/* font-size: 22px; */
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.checkboxWrapper input {
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+	height: 0;
+	width: 0;
+}
+
+.labelSupp {
+	padding: 15px 35px !important;
+	font-size: inherit !important;
+	text-align: left !important;
+	width: 100%;
+}
+/* .labelSupp:hover {
+  cursor: none !important;;
+} */
+
+/* Create a custom checkbox */
+.checkmark {
+	position: absolute;
+	top: 10px;
+	left: 0;
+	height: 25px;
+	width: 25px;
+	background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.checkboxWrapper:hover input ~ .checkmark {
+	background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkboxWrapper input:checked ~ .checkmark {
+	background-color: #2196f3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+	content: "";
+	position: absolute;
+	display: none;
+}
+
+/* Show the checkmark when checked */
+.checkboxWrapper input:checked ~ .checkmark:after {
+	display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkboxWrapper .checkmark:after {
+	left: 9px;
+	top: 5px;
+	width: 5px;
+	height: 10px;
+	border: solid white;
+	border-width: 0 3px 3px 0;
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+/* RADIO BUTTON*/
+/* Create a custom radio button */
+.customRadio {
+	position: absolute;
+	/* top: 0; */
+	left: 0;
+	height: 25px;
+	width: 25px;
+	background-color: #eee;
+	border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.checkboxWrapper:hover input ~ .customRadio {
+	background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.checkboxWrapper input:checked ~ .customRadio {
+	background-color: #2196f3;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.customRadio:after {
+	content: "";
+	position: absolute;
+	display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.checkboxWrapper input:checked ~ .customRadio:after {
+	display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.checkboxWrapper .customRadio:after {
+	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+}
+
+/* The popup form - hidden by default */
+/* REF: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_popup_form */
+.form-popup {
+	color: #000;
+	display: block;
+	position: fixed;
+	border: 3px solid #d1d1d1;
+	z-index: 19; /* Sit on top */
+	left: 0;
+	top: 0;
+	padding-top: 10%;
+	padding-left: 33%;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0, 0, 0); /* Fallback color */
+	background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+.invoice-popup {
+	color: #000;
+	display: block;
+	position: fixed;
+	border: 3px solid #d1d1d1;
+	z-index: 19; /* Sit on top */
+	left: 0;
+	top: 0;
+	padding-top: 2%;
+	padding-left: 10%;
+	padding-right: 10%;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0, 0, 0); /* Fallback color */
+	background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Add styles to the form container */
+.form-container {
+	/* left: 220px; */
+	/* top: 40%; */
+	width: 50%;
+	min-width: 400px;
+	padding: 30px;
+	background-color: #e1e1e1;
+	overflow: auto;
+}
+
+/* Full-width input fields */
+.form-container input[type=text],
+input[type=date],
+textarea,
+select {
+	width: 100%;
+	padding: 14px;
+	margin: 10px 0 10px 0;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container *:focus {
+	background-color: #fff;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+	background-color: #4caf50;
+	color: white;
+	padding: 16px 20px;
+	border: none;
+	cursor: pointer;
+	width: 100%;
+	margin-top: 20px;
+	/* margin-bottom:20px; */
+	opacity: 0.8;
+}
+
+.form-container input[type="submit"]:disabled {
+	border: 1px solid #999999;
+	background-color: #cccccc;
+	color: #666666;
+	cursor: no-drop;
+	/* pointer-events: none; */
+}
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+	background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover,
+.open-button:hover {
+	opacity: 1;
+}
+
+.labelPopup {
+	padding: 0 !important;
+	font-size: inherit !important;
+	text-align: left !important;
+	width: 100%;
+}
+
+@media screen and (max-width: 1024px) {
+	.form-container {
+		width: 50%;
+		min-width: 50%;
+	}
+}
+
+@media screen and (max-width: 800px) {
+	.form-container {
+		width: 100%;
+		min-width: 100%;
+	}
+}
+
+.formColor {
+	background-color: #9dbfaf;
+}
+
+.error {
+	color: red;
+	font-weight: bolder;
+}
+
+.bolder {
+	font-weight: bolder;
+}
+
+.note {
+	color: blue;
+	font-weight: bolder;
+}
+
+/* Style buttons */
+.addButton {
+	background-color: #4caf50; /* Blue background */
+	border: none; /* Remove borders */
+	color: white; /* White text */
+	padding: 10px 12px; /* Some padding */
+	margin-left: 10px;
+	font-size: 16px; /* Set a font size */
+	cursor: pointer; /* Mouse pointer on hover */
+}
+
+/* Darker background on mouse-over */
+.addButton:hover {
+	background-color: rgb(32, 143, 50);
+}
+
+.iconText {
+	font-size: 24px;
+	font-weight: 600;
+	padding-right: 10px;
+	/* padding: 10px; */
+	/* text-align: center; */
+	/* font-weight: bold; */
+	/* padding-bottom: 10px; */
+	/* font-weight: 800; */
+}
+
+.reactstrapInput {
+	padding: .375rem .75rem !important;
+	margin: 0 !important;
+	border: 0.094em solid #fff !important;
+	border-radius: .25rem;
+	background: #f1f1f1;
+}
+
+.paddingButton {
+	/* background-color: #4CAF50;  */
+	/* border: none;
+    color: white; */
+	padding: 10px 20px;
+}
+
+.deleteBtn {
+	background-color: #fff; /* Green */
+	border: 1px solid #ced4da;
+	/* color:red; */
+	/* padding: 5px !important ; */
+	/* padding: 10px 20px; */
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	cursor: pointer;
+	/* border-radius: 4px; */
+	/* margin:auto;  */
+	/* width: 100%; */
+}
+
+.linkBtn {
+	background-color: #fff;
+	padding: 2px 30px;
+	text-align: center;
+	display: inline-block;
+	cursor: pointer;
+}
+
+.linkBtn label[for*='linkBtn']:after {
+	content: '\f040';
+	color: #4caf50;
+	font-weight: 600;
+	font-size: 24px;
+	padding: 0px !important;
+}
+
+.btn-add {
+	color: #fff;
+	background-color: #28a745;
+	border-color: #28a745;
+	border-radius: 4px;
+	cursor: pointer;
+	margin: 20px 10px;
+	padding: 10px 30px;
+}
+
+.btn-add:disabled {
+	border: 1px solid #999999;
+	background-color: #cccccc;
+	color: #666666;
+	cursor: no-drop;
+}
+
+.btn-add-no-padding {
+	color: #fff;
+	background-color: #28a745;
+	border-color: #28a745;
+	border-radius: 4px;
+	cursor: pointer;
+	margin: 0 10px;
+}
+
+.btn-close {
+	color: #fff;
+	background-color: #dc3545;
+	border-color: #dc3545;
+	border-radius: 4px;
+	cursor: pointer;
+	margin: 0 10px;
+	padding: 10px 30px;
+}
+
+.btn-close:disabled {
+	border: 1px solid #999999;
+	background-color: #cccccc;
+	color: #666666;
+	cursor: no-drop;
+}
+
+.iconPadding {
+	padding-left: 10px;
+}
+
+.btnText {
+	font-size: 16px !important;
+}
+
+.receipt page {
+	background: white;
+	display: block;
+	margin: 0 auto;
+	margin-bottom: 0.5cm;
+	box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
+}
+.receipt page[size="A4"] {
+	width: 21cm;
+	height: 29.7cm;
+}
+
+.receipt {
+	width: 100%;
+	margin: 10px auto;
+	/* padding: 15px 20px; */
+}
+
+.receipt h2,
+title {
+	display: block;
+	font-size: 18px;
+	margin-top: 8px;
+	margin-bottom: 8px;
+	margin-left: 0;
+	margin-right: 0;
+	font-weight: bold;
+}
+
+.receipt table {
+	width: 100%;
+	/* border-collapse: collapse; */
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-weight: normal;
+	font-size: 12px;
+	margin: 0 auto;
+	border-collapse: collapse;
+}
+
+.receipt-header table {
+	width: 100%;
+	border-collapse: collapse;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-weight: normal;
+	font-size: 12px;
+	margin: 0 auto;
+}
+
+.receipt-header td,
+th {
+	padding: 2px;
+}
+
+.receipt tbody.withBorder th,
+td {
+	border: 1px solid #c1ced9 !important;
+	padding: 8px;
+}
+
+.receipt thead.noBorder td,
+th {
+	border: 0px solid #c1ced9 !important;
+}
+
+.receipt tfoot.noBorder td,
+th {
+	border: 0px solid #c1ced9 !important;
+}
+
+.receipt th,
+td {
+	text-align: left;
+}
+
+.receipt table th {
+	font-weight: bold;
+}
+
+.receipt td.total {
+	border-top: 1px solid #444444;
+}
